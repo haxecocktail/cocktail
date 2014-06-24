@@ -9,24 +9,27 @@
 package cocktail.core.css;
 
 import cocktail.core.config.Config;
-import cocktail.core.css.CSSData;
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.TransitionEvent;
+import cocktail.css.CSSStyleData;
+import cocktail.event.EventConstants;
+import cocktail.event.TransitionEvent;
 import cocktail.core.font.FontData;
 import cocktail.core.font.FontManager;
-import cocktail.core.geom.Matrix;
+import cocktail.geom.Matrix;
 import cocktail.core.html.HTMLDocument;
 import cocktail.core.html.HTMLElement;
 import cocktail.core.layout.computer.BackgroundStylesComputer;
 import cocktail.core.renderer.InvalidatingElementRenderer;
-import cocktail.core.css.CSSConstants;
+import cocktail.css.CSSConstants;
 import cocktail.core.transition.Transitioner;
 import cocktail.core.transition.Transition;
 import cocktail.core.transition.TransitionManager;
 import cocktail.core.css.CSSValueConverter;
 import cocktail.core.parser.ParserData;
-import cocktail.core.geom.GeomData;
+import cocktail.geom.GeomData;
 import cocktail.core.resource.ResourceManager;
+import cocktail.css.*;
+import cocktail.core.css.CSSCascadeData;
+import cocktail.css.CSSOMData;
 
 /**
  * This class has 3 main purposes :

@@ -8,16 +8,15 @@
 */
 package cocktail.port.base;
 
-import cocktail.core.event.Event;
-import cocktail.core.event.EventCallback;
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.KeyboardEvent;
-import cocktail.core.event.MouseEvent;
-import cocktail.core.event.UIEvent;
-import cocktail.core.event.WheelEvent;
+import cocktail.event.Event;
+import cocktail.event.EventConstants;
+import cocktail.event.KeyboardEvent;
+import cocktail.event.MouseEvent;
+import cocktail.event.UIEvent;
+import cocktail.event.WheelEvent;
 import cocktail.core.stacking.StackingContext;
 import cocktail.port.Bindings;
-import cocktail.core.geom.GeomData;
+import cocktail.geom.GeomData;
 
 /**
  * This class exposes an API to access platform

@@ -8,31 +8,28 @@
 */
 package cocktail.core.renderer;
 
-import cocktail.core.css.CSSStyleDeclaration;
 import cocktail.core.dom.Document;
 import cocktail.core.dom.DOMConstants;
 import cocktail.core.dom.Node;
-import cocktail.core.geom.GeomUtils;
-import cocktail.core.geom.Matrix;
+import cocktail.geom.GeomUtils;
+import cocktail.geom.Matrix;
 import cocktail.core.linebox.InlineBox;
 
-import cocktail.core.event.TransitionEvent;
+import cocktail.event.TransitionEvent;
 import cocktail.core.html.HTMLDocument;
 import cocktail.core.html.HTMLElement;
 import cocktail.core.transition.Transitioner;
 import cocktail.core.transition.Transition;
-import cocktail.core.geom.GeomData;
-import cocktail.core.ds.FastNode;
+import cocktail.geom.GeomData;
+import cocktail.ds.FastNode;
 
 
 import cocktail.core.css.CoreStyle;
-import cocktail.core.css.CSSConstants;
 import cocktail.core.layout.LayoutData;
 import cocktail.core.font.FontData;
 import cocktail.core.parser.ParserData;
 import cocktail.core.layer.LayerRenderer;
 import cocktail.core.graphics.GraphicsContext;
-import cocktail.core.css.CSSData;
 
 
 /**

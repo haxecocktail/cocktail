@@ -8,11 +8,10 @@
 */
 package cocktail.core.layer;
 
-import cocktail.core.ds.FastNode;
-import cocktail.core.geom.GeomData;
-import cocktail.core.geom.GeomUtils;
+import cocktail.ds.FastNode;
+import cocktail.geom.GeomData;
+import cocktail.geom.GeomUtils;
 import cocktail.core.renderer.ElementRenderer;
-import cocktail.core.css.CSSData;
 
 /**
  * Had to add this when updating to Haxe3 as recursive

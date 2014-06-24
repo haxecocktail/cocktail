@@ -8,10 +8,10 @@
 */
 package cocktail.port.platform.flash_player;
 
-import cocktail.core.event.EventConstants;
+import cocktail.event.EventConstants;
 import cocktail.core.html.HTMLDocument;
 import cocktail.core.http.HTTPConstants;
-import cocktail.core.timer.Timer;
+import cocktail.timer.Timer;
 import cocktail.port.base.NativeHttpBase;
 import flash.display.Loader;
 import flash.events.Event;

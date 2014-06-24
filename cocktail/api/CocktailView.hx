@@ -8,14 +8,14 @@
 */
 package cocktail.api;
 
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.KeyboardEvent;
+import cocktail.event.EventConstants;
+import cocktail.event.KeyboardEvent;
 import cocktail.core.html.HTMLDocument;
 import cocktail.core.http.HTTPConstants;
-import cocktail.core.timer.Timer;
+import cocktail.timer.Timer;
 import cocktail.core.window.Window;
 import cocktail.port.Bindings;
-import cocktail.core.geom.GeomData;
+import cocktail.geom.GeomData;
 import cocktail.core.http.HTTPData;
 import haxe.Http;
 import haxe.Resource;

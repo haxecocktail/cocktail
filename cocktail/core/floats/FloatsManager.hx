@@ -14,9 +14,8 @@ import cocktail.core.renderer.ElementRenderer;
 import cocktail.core.html.HTMLElement;
 
 import cocktail.core.layout.LayoutData;
-import cocktail.core.geom.GeomData;
-import cocktail.core.css.CSSData;
-import haxe.Log;
+import cocktail.geom.GeomData;
+import cocktail.core.css.CSSCascadeData;
 
 /**
  * For a given block box, keep track

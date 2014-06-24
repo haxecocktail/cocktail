@@ -8,12 +8,11 @@
 */
 package cocktail.core.graphics;
 
-import cocktail.core.css.CSSStyleDeclaration;
-import cocktail.core.event.Event;
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.UIEvent;
-import cocktail.core.geom.GeomUtils;
-import cocktail.core.geom.Matrix;
+import cocktail.event.Event;
+import cocktail.event.EventConstants;
+import cocktail.event.UIEvent;
+import cocktail.geom.GeomUtils;
+import cocktail.geom.Matrix;
 import cocktail.core.html.HTMLDocument;
 import cocktail.core.renderer.ElementRenderer;
 import cocktail.core.resource.ResourceManager;
@@ -21,13 +20,12 @@ import cocktail.core.graphics.GraphicsContext;
 import cocktail.port.base.ResourceBase;
 import cocktail.port.Bindings;
 import cocktail.core.layout.LayoutData;
-import cocktail.core.geom.GeomData;
+import cocktail.geom.GeomData;
 import cocktail.core.css.CoreStyle;
 import cocktail.core.layout.computer.BackgroundStylesComputer;
 import cocktail.core.css.CSSValueConverter;
-import cocktail.core.css.CSSData;
 import cocktail.core.parser.ParserData;
-import haxe.Log;
+import cocktail.css.CSSStyleData;
 
 /**
  * This class manages the instantation and drawing of the

@@ -9,16 +9,15 @@
 package cocktail.core.window;
 
 import cocktail.core.dom.Document;
-import cocktail.core.event.Event;
+import cocktail.event.Event;
 import cocktail.core.event.EventCallback;
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.UIEvent;
+import cocktail.event.EventConstants;
+import cocktail.event.UIEvent;
 import cocktail.core.html.HTMLAnchorElement;
 import cocktail.core.html.HTMLConstants;
 import cocktail.core.html.HTMLDocument;
 import cocktail.core.html.HTMLElement;
 import cocktail.port.Bindings;
-import cocktail.core.css.CSSData;
 import cocktail.core.layout.LayoutData;
 import cocktail.core.history.History;
 

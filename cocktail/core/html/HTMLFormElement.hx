@@ -7,10 +7,10 @@
  * http://www.silexlabs.org/labs/cocktail-licensing/
 */
 package cocktail.core.html;
-import cocktail.core.event.EventConstants;
+import cocktail.event.EventConstants;
 import cocktail.core.html.HTMLData;
 import cocktail.core.http.HTTPConstants;
-import cocktail.core.url.URL;
+import cocktail.url.URL;
 
 /**
  * The form element represents a collection of form-associated elements, 

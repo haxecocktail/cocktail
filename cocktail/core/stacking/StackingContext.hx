@@ -8,9 +8,8 @@
 */
 package cocktail.core.stacking;
 import cocktail.core.layer.LayerRenderer;
-import cocktail.core.ds.FastNode;
-import cocktail.core.css.CSSData;
-import cocktail.core.geom.GeomData;
+import cocktail.ds.FastNode;
+import cocktail.geom.GeomData;
 
 /**
  * Stacking contexts are used to determine the z-index

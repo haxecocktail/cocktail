@@ -8,28 +8,27 @@
 */
 package cocktail.core.html;
 
-import cocktail.core.css.SelectorManager;
+import cocktail.selector.SelectorMatcher;
 import cocktail.core.dom.NodeList;
 import cocktail.core.transition.TransitionManager;
 import cocktail.core.config.Config;
 import cocktail.core.css.CascadeManager;
-import cocktail.core.css.CSSRule;
-import cocktail.core.css.CSSStyleDeclaration;
-import cocktail.core.css.CSSStyleRule;
-import cocktail.core.css.CSSStyleSheet;
+import cocktail.css.CSSStyleDeclaration;
+import cocktail.css.CSSStyleData;
+import cocktail.css.CSSSelectorData;
+import cocktail.css.CSSStyleSheet;
+import cocktail.core.css.CSSCascadeData;
 import cocktail.core.css.DefaultCSSStyleSheet;
 import cocktail.core.css.StyleManager;
 import cocktail.core.dom.Document;
 import cocktail.core.dom.DOMConstants;
-import cocktail.core.dom.Element;
-import cocktail.core.dom.Node;
-import cocktail.core.event.Event;
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.KeyboardEvent;
-import cocktail.core.event.MouseEvent;
-import cocktail.core.event.TouchEvent;
-import cocktail.core.event.UIEvent;
-import cocktail.core.event.WheelEvent;
+import cocktail.event.Event;
+import cocktail.event.EventConstants;
+import cocktail.event.KeyboardEvent;
+import cocktail.event.MouseEvent;
+import cocktail.event.TouchEvent;
+import cocktail.event.UIEvent;
+import cocktail.event.WheelEvent;
 import cocktail.core.focus.FocusManager;
 import cocktail.core.font.FontManager;
 import cocktail.core.hittest.HitTestManager;
@@ -46,18 +45,17 @@ import cocktail.core.multitouch.MultiTouchManager;
 import cocktail.core.parser.DOMParser;
 import cocktail.core.renderer.ElementRenderer;
 import cocktail.core.renderer.InitialBlockRenderer;
-import cocktail.core.event.Touch;
+import cocktail.event.Touch;
 import cocktail.core.parser.ParserData;
-import cocktail.core.event.FocusEvent;
+import cocktail.event.FocusEvent;
 import cocktail.core.resource.ResourceManager;
-import cocktail.core.timer.Timer;
-import cocktail.core.url.URL;
+import cocktail.timer.Timer;
+import cocktail.url.URL;
 import cocktail.core.window.Window;
 import cocktail.core.graphics.GraphicsContext;
 import haxe.Log;
 import cocktail.core.layout.LayoutData;
-import cocktail.core.geom.GeomData;
-import cocktail.core.css.CSSData;
+import cocktail.geom.GeomData;
 import cocktail.port.Bindings;
 
 
@@ -296,10 +294,10 @@ class HTMLDocument extends Document
 	private var _styleManager:StyleManager;
 	
 	/**
-	 * A ref to the selector manager which can determine
+	 * A ref to the selector matcher which can determine
 	 * wether a node matches a given selector
 	 */
-	private var _selectorManager:SelectorManager;
+	private var _selectorMatcher:SelectorMatcher;
 	
 	/**
 	 * an instance of the class managing layout.
@@ -465,8 +463,8 @@ class HTMLDocument extends Document
 	 */
 	private function initStyleManager():Void
 	{
-		_selectorManager = new SelectorManager();
-		_styleManager = new StyleManager(_selectorManager);
+		_selectorMatcher= new SelectorMatcher();
+		_styleManager = new StyleManager(_selectorMatcher);
 		_styleManager.addStyleSheet(new DefaultCSSStyleSheet());
 		
 	}
@@ -757,7 +755,7 @@ class HTMLDocument extends Document
 		var length:Int = selectors.length;
 		for (i in 0...length)
 		{
-			if (_selectorManager.matchSelector(node, selectors[i], matchedPseudoClass) == true)
+			if (_selectorMatcher.matchSelector(cast node, cast selectors[i], cast matchedPseudoClass) == true)
 			{
 				return true;
 			}
@@ -1309,18 +1307,18 @@ class HTMLDocument extends Document
 		}
 		
 		//if the provided url is absolute, return as-is
-		var typedURL:cocktail.core.url.URL = cocktail.core.url.URL.fromString(url);
-		if (cocktail.core.url.URL.isRelative(typedURL) == false)
+		var typedURL:cocktail.url.URL = cocktail.url.URL.fromString(url);
+		if (cocktail.url.URL.isRelative(typedURL) == false)
 		{
 			return url;
 		}
 		
-		var documentURL:cocktail.core.url.URL = cocktail.core.url.URL.fromString(location.href);
+		var documentURL:cocktail.url.URL = cocktail.url.URL.fromString(location.href);
 		
 		//concatenate document url and provided url
-		var retURL:cocktail.core.url.URL = cocktail.core.url.URL.appendURL(documentURL, typedURL);
+		var retURL:cocktail.url.URL = cocktail.url.URL.appendURL(documentURL, typedURL);
 		
-		return cocktail.core.url.URL.toString(retURL);
+		return cocktail.url.URL.toString(retURL);
 	}
 	
 	//////////////////////////////////////////////////////////////////////////////////////////

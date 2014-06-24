@@ -8,10 +8,10 @@
 */
 package cocktail.port.platform.flash_player;
 
-import cocktail.core.event.Event;
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.MouseEvent;
-import cocktail.core.event.WheelEvent;
+import cocktail.event.Event;
+import cocktail.event.EventConstants;
+import cocktail.event.MouseEvent;
+import cocktail.event.WheelEvent;
 import cocktail.port.base.MouseListenerBase;
 import cocktail.port.Bindings;
 import cocktail.core.layout.LayoutData;
@@ -20,10 +20,9 @@ import flash.display.DisplayObject;
 import flash.display.DisplayObjectContainer;
 import flash.geom.Point;
 import flash.Lib;
-import cocktail.core.geom.GeomData;
-import cocktail.core.css.CSSData;
+import cocktail.geom.GeomData;
 import flash.Vector;
-import haxe.Log;
+import cocktail.css.CSSStyleData;
 
 /**
  * This is the flash AVM2 implementation of the mouse event manager.

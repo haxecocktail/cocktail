@@ -8,11 +8,11 @@
 */
 package cocktail.port.base;
 
-import cocktail.core.event.Event;
-import cocktail.core.event.EventConstants;
-import cocktail.core.geom.Matrix;
+import cocktail.event.Event;
+import cocktail.event.EventConstants;
+import cocktail.geom.Matrix;
 import cocktail.core.graphics.GraphicsContext;
-import cocktail.core.geom.GeomData;
+import cocktail.geom.GeomData;
 
 /**
  * This is a base class proxying access to 

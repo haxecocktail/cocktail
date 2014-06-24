@@ -10,21 +10,20 @@ package cocktail.core.renderer;
 
 import cocktail.core.css.CoreStyle;
 import cocktail.core.dom.Node;
-import cocktail.core.event.Event;
-import cocktail.core.event.EventConstants;
-import cocktail.core.event.FocusEvent;
-import cocktail.core.event.KeyboardEvent;
-import cocktail.core.geom.Matrix;
+import cocktail.event.Event;
+import cocktail.event.EventConstants;
+import cocktail.event.FocusEvent;
+import cocktail.event.KeyboardEvent;
+import cocktail.geom.Matrix;
 import cocktail.core.html.HTMLElement;
 import cocktail.core.css.CSSValueConverter;
-import cocktail.core.geom.GeomData;
+import cocktail.geom.GeomData;
 import cocktail.core.layer.CompositingLayerRenderer;
 import cocktail.core.layer.LayerRenderer;
 import cocktail.core.layout.LayoutData;
 import cocktail.core.font.FontData;
 import cocktail.core.graphics.GraphicsContext;
 import cocktail.port.Bindings;
-import cocktail.core.css.CSSData;
 
 /**
  * This is an input renderer in charge of
